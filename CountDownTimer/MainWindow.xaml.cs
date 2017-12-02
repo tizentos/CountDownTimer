@@ -21,7 +21,7 @@ namespace CountDownTimer
     /// </summary>
     public partial class MainWindow : Window
     {
-        int TotalTime = 123;
+        int TotalTime = 1200;
         DispatcherTimer timer = new DispatcherTimer();
         DispatcherTimer timer2 = new DispatcherTimer();
         DateTime CurrentTime;
@@ -51,7 +51,7 @@ namespace CountDownTimer
             {
                 timer.Stop();
                 labelCountDown.Content = "00:00";
-                TotalTime = 123;
+                TotalTime = 1200;
                 buttonStart.Content = "START";
                 timer2.Start();
             }
@@ -77,7 +77,7 @@ namespace CountDownTimer
             {
                 timer.Stop();
                 labelCountDown.Content = "00:00";
-                TotalTime = 123;
+                TotalTime = 1200;
                 buttonStart.Content = "START";
                 timer2.Start();
             }
@@ -87,7 +87,6 @@ namespace CountDownTimer
         {
             CurrentTime = DateTime.Now;
             labelCountDown.Content = "00:00";
-            //  CurrentTime = new DateTime(2009, 12, 2, 2, 3, 2);
             DigitalClockText.Text = ((CurrentTime.Hour <= 10) ? "0" + CurrentTime.Hour : CurrentTime.Hour.ToString()) + ":" + ((CurrentTime.Minute <= 10) ? "0" + CurrentTime.Minute : CurrentTime.Minute.ToString());
             timer2.Start();
         }
